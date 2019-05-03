@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DropDownTableViewCell" customModule="MakeDropDown" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bA2-DK-RsH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWp-aI-plz">
+                                <rect key="frame" x="8" y="0.0" width="144" height="43.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guu-fG-pof">
+                                <rect key="frame" x="168" y="0.0" width="144" height="43.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="guu-fG-pof" secondAttribute="trailing" constant="8" id="19P-Bs-djd"/>
+                            <constraint firstItem="guu-fG-pof" firstAttribute="top" secondItem="bA2-DK-RsH" secondAttribute="top" id="Bs3-gs-dUY"/>
+                            <constraint firstAttribute="bottom" secondItem="guu-fG-pof" secondAttribute="bottom" id="Hdt-lH-7ig"/>
+                            <constraint firstAttribute="bottom" secondItem="OWp-aI-plz" secondAttribute="bottom" id="N61-uf-9Ey"/>
+                            <constraint firstItem="OWp-aI-plz" firstAttribute="width" secondItem="bA2-DK-RsH" secondAttribute="width" multiplier="0.45" id="Uyp-NH-LzE"/>
+                            <constraint firstItem="OWp-aI-plz" firstAttribute="top" secondItem="bA2-DK-RsH" secondAttribute="top" id="chS-6x-fgX"/>
+                            <constraint firstItem="guu-fG-pof" firstAttribute="width" secondItem="bA2-DK-RsH" secondAttribute="width" multiplier="0.45" id="ejr-xu-qGU"/>
+                            <constraint firstItem="OWp-aI-plz" firstAttribute="leading" secondItem="bA2-DK-RsH" secondAttribute="leading" constant="8" id="ofj-tM-vFD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bA2-DK-RsH" secondAttribute="bottom" id="OZN-kz-VDr"/>
+                    <constraint firstItem="bA2-DK-RsH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="QcL-Hm-pfx"/>
+                    <constraint firstAttribute="trailing" secondItem="bA2-DK-RsH" secondAttribute="trailing" id="ZQU-cf-DA9"/>
+                    <constraint firstItem="bA2-DK-RsH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wYE-n5-HCu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cityNameLabel" destination="guu-fG-pof" id="kk5-Ek-F5K"/>
+                <outlet property="countryNameLabel" destination="OWp-aI-plz" id="hNO-cN-Erc"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+        </tableViewCell>
+    </objects>
+</document>
