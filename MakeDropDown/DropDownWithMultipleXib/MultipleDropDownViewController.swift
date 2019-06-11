@@ -118,7 +118,13 @@ class MultipleDropDownViewController: UIViewController {
     @objc func numberLabelTapped(){
         self.numberDropDown.showDropDown(height: self.dropDownRowHeight * 4)
     }
-
+    
+    //MARK: - Action methods
+    
+    @IBAction func barBackBtnAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -76,10 +76,12 @@ class MakeDropDown: UIView{
             self.frame = CGRect(x: (self.viewPositionRef?.minX)!, y: (self.viewPositionRef?.maxY)! + self.offset, width: width, height: 0)
             self.dropDownTableView?.frame = CGRect(x: 0, y: 0, width: width, height: 0)
             self.dropDownTableView?.reloadData()
-            UIView.animate(withDuration: 0.5) {
+            
+            UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.05, options: .curveLinear
+                , animations: {
                 self.frame.size = CGSize(width: self.width, height: height)
                 self.dropDownTableView?.frame.size = CGSize(width: self.width, height: height)
-            }
+            })
         }
         
     }
@@ -91,10 +93,11 @@ class MakeDropDown: UIView{
             + self.offset, width: width, height: 0)
         self.dropDownTableView?.frame = CGRect(x: 0, y: 0, width: width, height: 0)
         self.dropDownTableView?.reloadData()
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.7, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.05, options: .curveLinear
+            , animations: {
             self.frame.size = CGSize(width: self.width, height: height)
             self.dropDownTableView?.frame.size = CGSize(width: self.width, height: height)
-        }
+        })
     }
     
     //Sets Row Height of your Custom XIB
@@ -106,7 +109,8 @@ class MakeDropDown: UIView{
     //Hides DropDownMenu
     func hideDropDown(){
         isDropDownPresent = false
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveLinear
+            , animations: {
             self.frame.size = CGSize(width: self.width, height: 0)
             self.dropDownTableView?.frame.size = CGSize(width: self.width, height: 0)
         })
@@ -115,7 +119,8 @@ class MakeDropDown: UIView{
     // Removes DropDown Menu
     // Use it only if needed
     func removeDropDown(){
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.3, options: .curveLinear
+            , animations: {
             self.dropDownTableView?.frame.size = CGSize(width: 0, height: 0)
         }) { (_) in
             self.removeFromSuperview()
